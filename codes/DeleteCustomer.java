@@ -21,6 +21,7 @@ import java.awt.event.ActionEvent;
 public class DeleteCustomer extends JFrame {
 	private JPanel contentPane;
         Choice c1;
+
 	/**
 	 * Launch the application.
 	 */
@@ -147,7 +148,8 @@ public class DeleteCustomer extends JFrame {
                             Conn c = new Conn();
                            
                             try{
-                                ResultSet rs = c.s.executeQuery("select * from customer where username = 'rajanrai'");
+                                String s1 = c1.getSelectedItem();
+                                ResultSet rs = c.s.executeQuery("select * from customer where username = '"+s1+"'");
                                 if(rs.next()){
                                     l2.setText(rs.getString(2));  
                                     l3.setText(rs.getString(3));
@@ -162,8 +164,8 @@ public class DeleteCustomer extends JFrame {
                         }
 		});
 		b1.setBounds(425, 70, 80, 22);
-                b1.setBackground(Color.BLACK);
-                b1.setForeground(Color.WHITE);
+                b1.setBackground(Color.decode("#8a967a"));
+                b1.setForeground(Color.decode("#eaf3e3"));
 		contentPane.add(b1);
 		
 
@@ -176,7 +178,7 @@ public class DeleteCustomer extends JFrame {
                             try{
 	    			String s1 = c1.getSelectedItem(); 
                                 
-                                String q1 = "update from customer where username = '"+s1+"'";
+                                String q1 = "delete from customer where username = '"+s1+"'";
                                 c.s.executeUpdate(q1);
                                 
 	    			JOptionPane.showMessageDialog(null, "Customer Detail Deleted Successfully");
@@ -190,8 +192,8 @@ public class DeleteCustomer extends JFrame {
 			}
 		});
 		btnNewButton.setBounds(100, 430, 120, 30);
-                btnNewButton.setBackground(Color.BLACK);
-                btnNewButton.setForeground(Color.WHITE);
+                btnNewButton.setBackground(Color.decode("#8a967a"));
+                btnNewButton.setForeground(Color.decode("#eaf3e3"));
 		contentPane.add(btnNewButton);
 		
 		JButton btnExit = new JButton("Back");
@@ -201,10 +203,10 @@ public class DeleteCustomer extends JFrame {
 			}
 		}); 
 		btnExit.setBounds(260, 430, 120, 30);
-                btnExit.setBackground(Color.BLACK);
-                btnExit.setForeground(Color.WHITE);
+                btnExit.setBackground(Color.decode("#8a967a"));
+                btnExit.setForeground(Color.decode("#eaf3e3"));
 		contentPane.add(btnExit);
                 
-                getContentPane().setBackground(Color.WHITE);
+                getContentPane().setBackground(Color.decode("#eaf3e3"));
 	}
 }

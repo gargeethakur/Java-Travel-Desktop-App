@@ -51,12 +51,12 @@ public class Loading extends JFrame implements Runnable {
 
             setBounds(600, 300, 600, 400);
             contentPane = new JPanel();
-            contentPane.setBackground(new Color(51,204, 255));
+            contentPane.setBackground(Color.decode("#8a967a"));
             setContentPane(contentPane);
             contentPane.setLayout(null);
 
             JLabel lbllibraryManagement = new JLabel("WanderWise");
-            lbllibraryManagement.setForeground(new Color(72, 209, 204));
+            lbllibraryManagement.setForeground(Color.decode("#8a967a"));
             lbllibraryManagement.setFont(new Font("Trebuchet MS", Font.BOLD, 35));
             lbllibraryManagement.setBounds(50, 46, 700, 35);
             contentPane.add(lbllibraryManagement);
@@ -69,12 +69,12 @@ public class Loading extends JFrame implements Runnable {
 
             JLabel lblNewLabel_2 = new JLabel("Please Wait....");
             lblNewLabel_2.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 20));
-            lblNewLabel_2.setForeground(new Color(160, 82, 45));
+            lblNewLabel_2.setForeground(Color.decode("#8a967a"));
             lblNewLabel_2.setBounds(200, 165, 150, 20);
             contentPane.add(lblNewLabel_2);
 
             JPanel panel = new JPanel();
-            panel.setBackground(Color.WHITE);
+            panel.setBackground(Color.decode("#eaf3e3"));
             panel.setBounds(10, 10, 580, 380);
             contentPane.add(panel);
               

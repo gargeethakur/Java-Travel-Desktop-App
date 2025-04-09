@@ -34,8 +34,8 @@ public class About extends JFrame implements ActionListener {
         setFont(f);
 
         s = "                                    About Projects          \n  "
-                + "\nThe objective of the Travel and Tourism Management System"
-                + "project is to develop a system that automates the processes "
+                + "\nThe objective of Wanderwise "
+                + "is to develop a system that automates the processes "
                 + "and activities of a travel and the purpose is to design a "
                 + "system using which one can perform all operations related to "
                 + "traveling.\n\n"
@@ -69,7 +69,7 @@ public class About extends JFrame implements ActionListener {
         JLabel l1 = new JLabel("About Project");
         add(l1);
         l1.setBounds(170, 10, 180, 80);
-        l1.setForeground(Color.red);
+        l1.setForeground(Color.decode("#8a967a"));
 
         Font f2 = new Font("RALEWAY", Font.BOLD, 20);
         l1.setFont(f2);

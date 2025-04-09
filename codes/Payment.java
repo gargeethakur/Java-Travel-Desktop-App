@@ -25,7 +25,7 @@ public class Payment extends JFrame{
         setLayout(null);
         setBounds(600, 220, 800, 600);
         
-        JLabel label=new JLabel("Pay using Paytm");
+        JLabel label=new JLabel("Pay using PayPal");
         label.setFont(new Font("Raleway", Font.BOLD, 40));
         label.setBounds(50, 20, 350, 45);
         add(label);
@@ -40,7 +40,7 @@ public class Payment extends JFrame{
         JButton pay = new JButton("Pay");
         pay.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                new Paytm().setVisible(true);
+                new Paytmm().setVisible(true);
             }
         });
         pay.setBounds(420, 20, 80, 40);
@@ -55,7 +55,7 @@ public class Payment extends JFrame{
         back.setBounds(510, 20, 80, 40);
         add(back);
         
-        getContentPane().setBackground(Color.WHITE);
+        getContentPane().setBackground(Color.decode("#eaf3e3"));
         setVisible(true);
 
     }

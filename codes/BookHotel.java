@@ -72,7 +72,7 @@ public class BookHotel extends JFrame {
                 Conn c = new Conn();
                 try{
 
-                    ResultSet rs = c.s.executeQuery("select * from hotels");
+                    ResultSet rs = c.s.executeQuery("select * from hotel");
                     while(rs.next()){
                         c1.add(rs.getString("name"));
                     }
@@ -162,7 +162,7 @@ public class BookHotel extends JFrame {
 
                     ResultSet rs = c.s.executeQuery("select * from customer where username = '"+username+"'");
                     while(rs.next()){
-                        l2.setText(rs.getString("id_type"));
+                        l2.setText(rs.getString("id"));
                         l3.setText(rs.getString("number"));
                         l4.setText(rs.getString("phone"));
                         
@@ -179,13 +179,13 @@ public class BookHotel extends JFrame {
                             try{
 	    			String s1 = c1.getSelectedItem(); 
                                 
-                                String q1 = "select * from hotels where name = '"+c1.getSelectedItem()+"'";
+                                String q1 = "select * from hotel where name = '"+c1.getSelectedItem()+"'";
                                 ResultSet rs = c.s.executeQuery(q1);
                                 if(rs.next()){
                                     
-                                    int cost = Integer.parseInt(rs.getString("cost_per_day"));
-                                    int food = Integer.parseInt(rs.getString("food_charges"));
-                                    int ac = Integer.parseInt(rs.getString("ac_charges"));
+                                    int cost = Integer.parseInt(rs.getString("costperperson"));
+                                    int food = Integer.parseInt(rs.getString("food"));
+                                    int ac = Integer.parseInt(rs.getString("acroom"));
                                     
                                     int persons = Integer.parseInt(t1.getText());
                                     int days = Integer.parseInt(t2.getText());
@@ -212,8 +212,8 @@ public class BookHotel extends JFrame {
                         }
 		});
 		b1.setBounds(50, 470, 120, 30);
-                b1.setBackground(Color.BLACK);
-                b1.setForeground(Color.WHITE);
+                b1.setBackground(Color.decode("#8a967a"));
+                b1.setForeground(Color.decode("#eaf3e3"));
 		contentPane.add(b1);
 		
 
@@ -226,7 +226,7 @@ public class BookHotel extends JFrame {
                             try{
 	    			String s1 = c1.getSelectedItem(); 
                                 
-                                String q1 = "insert into bookHotel values('"+l1.getText()+"', '"+c1.getSelectedItem()+"', '"+t1.getText()+"', '"+t2.getText()+"', '"+c2.getSelectedItem()+"', '"+c3.getSelectedItem()+"', '"+l2.getText()+"', '"+l3.getText()+"', '"+l4.getText()+"', '"+l5.getText()+"')";
+                                String q1 = "insert into BookHotel values('"+l1.getText()+"', '"+c1.getSelectedItem()+"', '"+t1.getText()+"', '"+t2.getText()+"', '"+c2.getSelectedItem()+"', '"+c3.getSelectedItem()+"', '"+l2.getText()+"', '"+l3.getText()+"', '"+l4.getText()+"', '"+l5.getText()+"')";
                                 c.s.executeUpdate(q1);
                                 
 	    			JOptionPane.showMessageDialog(null, "Hotel Booked Successfully");
@@ -238,8 +238,8 @@ public class BookHotel extends JFrame {
 			}
 		});
 		btnNewButton.setBounds(200, 470, 120, 30);
-                btnNewButton.setBackground(Color.BLACK);
-                btnNewButton.setForeground(Color.WHITE);
+                btnNewButton.setBackground(Color.decode("#8a967a"));
+                btnNewButton.setForeground(Color.decode("#eaf3e3"));
 		contentPane.add(btnNewButton);
 		
 		JButton btnExit = new JButton("Back");
@@ -249,10 +249,10 @@ public class BookHotel extends JFrame {
 			}
 		}); 
 		btnExit.setBounds(350, 470, 120, 30);
-                btnExit.setBackground(Color.BLACK);
-                btnExit.setForeground(Color.WHITE);
+                btnExit.setBackground(Color.decode("#8a967a"));
+                btnExit.setForeground(Color.decode("#eaf3e3"));
 		contentPane.add(btnExit);
                 
-                getContentPane().setBackground(Color.WHITE);
+                getContentPane().setBackground(Color.decode("#eaf3e3"));
 	}
 }

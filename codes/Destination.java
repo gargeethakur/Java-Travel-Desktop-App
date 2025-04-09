@@ -60,7 +60,7 @@ public class Destination extends JFrame implements Runnable {
     public Destination() {
 
         setBounds(580, 220, 900, 700);
-        getContentPane().setBackground(new Color(220, 250, 250));
+        getContentPane().setBackground(Color.decode("#eaf3e3"));
         
         th = new Thread(this);
 
@@ -77,7 +77,7 @@ public class Destination extends JFrame implements Runnable {
         ImageIcon i4 = new ImageIcon(ClassLoader.getSystemResource("travel/management/system/icons/dest2.png"));
         Image i5 = i4.getImage().getScaledInstance(900, 700, Image.SCALE_DEFAULT);
         ImageIcon i6 = new ImageIcon(i5);
-        l3 = new JLabel(i4);
+        l3 = new JLabel(i6);
         l3.setBounds(0, 0, 900, 700);
         add(l3);
         l3.setVisible(false);

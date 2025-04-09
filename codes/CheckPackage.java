@@ -40,7 +40,7 @@ public class CheckPackage extends JFrame{
     public JPanel createPackage(String[] pack){
         JPanel p1 = new JPanel();
         p1.setLayout(null);
-        p1.setBackground(Color.WHITE);
+        p1.setBackground(Color.decode("#eaf3e3"));
       
         ImageIcon i1  = new ImageIcon(ClassLoader.getSystemResource("travel/management/system/icons/"+pack[0]));
         Image i3 = i1.getImage().getScaledInstance(550, 300,Image.SCALE_DEFAULT);
@@ -52,6 +52,7 @@ public class CheckPackage extends JFrame{
         JLabel lblName = new JLabel(pack[1]);
         lblName.setFont(new Font("Yu Mincho", Font.PLAIN, 30));
         lblName.setBounds(50, 5, 350, 53);
+        lblName.setBackground(Color.decode("#eaf3e3"));
         p1.add(lblName);
 
         JLabel l3 = new JLabel(pack[2]);

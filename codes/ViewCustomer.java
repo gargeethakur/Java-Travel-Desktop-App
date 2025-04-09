@@ -93,8 +93,8 @@ public class ViewCustomer extends JFrame {
 			}
 		});
 		btnNewButton.setBounds(390, 400, 120, 30);
-                btnNewButton.setBackground(Color.BLACK);
-                btnNewButton.setForeground(Color.WHITE);
+                btnNewButton.setBackground(Color.decode("#8a967a"));
+                btnNewButton.setForeground(Color.decode("#eaf3e3"));
 		contentPane.add(btnNewButton);
 		
 		lblAvailability = new JLabel("Username");
@@ -134,7 +134,7 @@ public class ViewCustomer extends JFrame {
 		l6.setBounds(820, 15, 90, 14);
 		contentPane.add(l6);
                 
-                getContentPane().setBackground(Color.WHITE);
+                getContentPane().setBackground(Color.decode("#eaf3e3"));
 	}
 
 }

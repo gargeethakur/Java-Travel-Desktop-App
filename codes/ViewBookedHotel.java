@@ -140,7 +140,7 @@ public class ViewBookedHotel extends JFrame {
                 Conn c = new Conn();
                 try{
 
-                    ResultSet rs = c.s.executeQuery("select * from bookHotel where username = '"+username+"'");
+                    ResultSet rs = c.s.executeQuery("select * from BookHotel where username = '"+username+"'");
                     while(rs.next()){
                         l1.setText(rs.getString(1));
                         l2.setText(rs.getString(2));
@@ -168,9 +168,9 @@ public class ViewBookedHotel extends JFrame {
 		}); 
 		btnExit.setBounds(160, 470, 120, 30);
                 btnExit.setBackground(Color.BLACK);
-                btnExit.setForeground(Color.WHITE);
+                btnExit.setForeground(Color.decode("#eaf3e3"));
 		contentPane.add(btnExit);
                 
-                getContentPane().setBackground(Color.WHITE);
+                getContentPane().setBackground(Color.decode("#eaf3e3"));
 	}
 }

@@ -197,8 +197,8 @@ public class AddCustomer extends JFrame {
 			}
 		});
 		btnNewButton.setBounds(100, 430, 120, 30);
-                btnNewButton.setBackground(Color.BLACK);
-                btnNewButton.setForeground(Color.WHITE);
+                btnNewButton.setBackground(Color.decode("#8a967a"));
+                btnNewButton.setForeground(Color.decode("#eaf3e3"));
 		contentPane.add(btnNewButton);
 		
 		JButton btnExit = new JButton("Back");
@@ -208,10 +208,10 @@ public class AddCustomer extends JFrame {
 			}
 		}); 
 		btnExit.setBounds(260, 430, 120, 30);
-                btnExit.setBackground(Color.BLACK);
-                btnExit.setForeground(Color.WHITE);
+                btnExit.setBackground(Color.decode("#8a967a"));
+                btnExit.setForeground(Color.decode("#eaf3e3"));
 		contentPane.add(btnExit);
                 
-                getContentPane().setBackground(Color.WHITE);
+                getContentPane().setBackground(Color.decode("#eaf3e3"));
 	}
 }

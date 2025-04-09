@@ -123,7 +123,7 @@ public class BookPackage extends JFrame {
                     Conn c = new Conn();
                     ResultSet rs = c.s.executeQuery("select * from customer where username = '"+username+"'");
                     while(rs.next()){
-                        l2.setText(rs.getString("id_type"));
+                        l2.setText(rs.getString("id"));
                         l3.setText(rs.getString("number"));
                         l4.setText(rs.getString("phone"));
                         
@@ -151,8 +151,8 @@ public class BookPackage extends JFrame {
                         }
 		});
 		b1.setBounds(50, 350, 120, 30);
-                b1.setBackground(Color.BLACK);
-                b1.setForeground(Color.WHITE);
+                b1.setBackground(Color.decode("#8a967a"));
+                b1.setForeground(Color.decode("#eaf3e3"));
 		contentPane.add(b1);
 		
 
@@ -177,8 +177,8 @@ public class BookPackage extends JFrame {
 			}
 		});
 		btnNewButton.setBounds(200, 350, 120, 30);
-                btnNewButton.setBackground(Color.BLACK);
-                btnNewButton.setForeground(Color.WHITE);
+                btnNewButton.setBackground(Color.decode("#8a967a"));
+                btnNewButton.setForeground(Color.decode("#eaf3e3"));
 		contentPane.add(btnNewButton);
 		
 		JButton btnExit = new JButton("Back");
@@ -188,10 +188,10 @@ public class BookPackage extends JFrame {
 			}
 		}); 
 		btnExit.setBounds(350, 350, 120, 30);
-                btnExit.setBackground(Color.BLACK);
-                btnExit.setForeground(Color.WHITE);
+                btnExit.setBackground(Color.decode("#8a967a"));
+                btnExit.setForeground(Color.decode("#eaf3e3"));
 		contentPane.add(btnExit);
                 
-                getContentPane().setBackground(Color.WHITE);
+                getContentPane().setBackground(Color.decode("#eaf3e3"));
 	}
 }

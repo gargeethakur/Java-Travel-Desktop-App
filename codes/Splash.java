@@ -37,7 +37,7 @@ class SplashFrame extends JFrame implements Runnable{
     @Override
     public void run(){
         try{
-            Thread.sleep(7000);
+            Thread.sleep(2500);
             this.setVisible(false);
             
             Login l = new Login();

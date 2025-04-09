@@ -16,7 +16,7 @@ public class Home extends JFrame{
     public Home(String username) {
         super("WanderWise");
 	this.username = username;
-        setForeground(Color.CYAN);
+        setForeground(Color.BLACK);
         setLayout(null); 
 
         
@@ -28,9 +28,9 @@ public class Home extends JFrame{
         add(NewLabel);
         
         JLabel l1 = new JLabel("WanderWise");
-	l1.setForeground(Color.WHITE);
+	l1.setForeground(Color.BLACK);
         l1.setFont(new Font("Tahoma", Font.PLAIN, 55));
-	l1.setBounds(500, 60, 1000, 100);
+	l1.setBounds(60, 60, 1000, 100);
 	NewLabel.add(l1);
 		
 		
@@ -38,7 +38,7 @@ public class Home extends JFrame{
 	setJMenuBar(menuBar);
 		
         JMenu m1 = new JMenu("CUSTOMER");
-        m1.setForeground(Color.BLUE);
+        m1.setForeground(Color.decode("#5D6453"));
 	menuBar.add(m1);
 		
         JMenuItem mi1 = new JMenuItem("ADD CUSTOMER");
@@ -80,7 +80,7 @@ public class Home extends JFrame{
         
 		
 	JMenu m2 = new JMenu("PACKAGES");
-        m2.setForeground(Color.RED);
+        m2.setForeground(Color.decode("#8a967a"));
 	menuBar.add(m2);
         
         JMenuItem mi6 = new JMenuItem("CHECK PACKAGE");
@@ -115,7 +115,7 @@ public class Home extends JFrame{
         
         
         JMenu m3 = new JMenu("HOTELS");
-        m3.setForeground(Color.BLUE);
+        m3.setForeground(Color.decode("#5D6453"));
 	menuBar.add(m3);
         
         JMenuItem mi8 = new JMenuItem("BOOK HOTELS");
@@ -149,7 +149,7 @@ public class Home extends JFrame{
         });
         
         JMenu m4 = new JMenu("DESTINATION");
-        m4.setForeground(Color.RED);
+        m4.setForeground(Color.decode("#8a967a"));
 	menuBar.add(m4);
         
         JMenuItem mi11 = new JMenuItem("DESTINATION");
@@ -161,10 +161,10 @@ public class Home extends JFrame{
         
         
         JMenu m5 = new JMenu("PAYMENT");
-        m5.setForeground(Color.BLUE);
+        m5.setForeground(Color.decode("#5D6453"));
 	menuBar.add(m5);
         
-        JMenuItem mi12 = new JMenuItem("PAY USING PAYTM");
+        JMenuItem mi12 = new JMenuItem("PAY USING PAYPAL");
 	m5.add(mi12);
         
         mi12.addActionListener((ActionEvent ae) -> {
@@ -172,7 +172,7 @@ public class Home extends JFrame{
         });
         
         JMenu m6 = new JMenu("UTILITY");
-        m6.setForeground(Color.RED);
+        m6.setForeground(Color.decode("#8a967a"));
 	menuBar.add(m6);
         
         JMenuItem mi13 = new JMenuItem("NOTEPAD");
@@ -195,7 +195,7 @@ public class Home extends JFrame{
         });
         
         JMenu m7 = new JMenu("ABOUT");
-        m7.setForeground(Color.BLUE);
+        m7.setForeground(Color.decode("#5D6453"));
 	menuBar.add(m7);
         
         JMenuItem mi15 = new JMenuItem("ABOUT");
@@ -209,6 +209,6 @@ public class Home extends JFrame{
         
         setExtendedState(JFrame.MAXIMIZED_BOTH); 
 	setVisible(true);
-        getContentPane().setBackground(Color.WHITE);
+        getContentPane().setBackground(Color.decode("#eaf3e3"));
     }
 }
